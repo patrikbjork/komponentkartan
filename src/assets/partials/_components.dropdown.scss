@@ -27,23 +27,29 @@ $filter-area-height: 60px;
   padding-left: $border--single + $margin--slim;
 }
 
+.readonly .validation {
+  max-height: $component-height;
+}
+
 .dropdown--edit {
   @extend .background-color--primary;
   position: relative;
-  display: block;
+  display: inline-block;
   height: $component-height;
-  width: $dropdown-width--medium;
+  min-width: $dropdown-width--medium;
+  max-width: $dropdown-width--medium;
   padding: 0px;
-  transition: background-color 0.3s linear;
+  transition: background-color 0.3s linear 0.3s, max-width 0.3s linear 0s;
   cursor: pointer;
   .disabled & {
     background-color: $control-color--disabled;
     cursor: default;
   }
   .readonly & {
+    transition: background-color 0.3s linear 0s, max-width 0.3s linear 0.3s;
     background-color: $background-color--content;
     cursor: default;
-    min-width: $dropdown-width--medium;
+    max-width: 1000px;
     width: auto;
     height: auto;
     min-height: $component-height;
@@ -73,12 +79,13 @@ $filter-area-height: 60px;
       cursor: default;
     }
     .readonly & {
-      transition: width 0.3s linear 0.3s, max-width 0.3s linear 0.3s, border-color 0.3s linear 0s, background-color 0.3s linear 0s, opacity 0.3s linear 0.3s;
+      transition: width 0.3s linear 0.3s, max-width 0.3s linear 0.3s, border-color 0.3s linear 0s, background-color 0.3s linear 0s, opacity 0.3s linear 0s;
       background-color: $background-color--content;
       border-color: $background-color--content;
       outline: none;
       cursor: text;
       word-wrap: break-word;
+      white-space: normal;
       min-height: $component-height;
       display: block;
       max-height: 500px;
