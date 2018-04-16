@@ -10,7 +10,7 @@ $filter-area-height: 60px;
     opacity: 0;
     max-height: 0;
     max-width: 0;
-    transition: opacity 0.3s linear, max-height 0.3s linear, max-width 0.6s linear;
+    transition: opacity 0.3s linear, max-height 0.3s linear 0.3s, max-width 0.3s linear 0.3s;
     transition-delay: 0s;
   }
   .validation {
@@ -34,7 +34,7 @@ $filter-area-height: 60px;
   height: $component-height;
   width: $dropdown-width--medium;
   padding: 0px;
-  transition: background-color 0.6s linear;
+  transition: background-color 0.3s linear;
   cursor: pointer;
   .disabled & {
     background-color: $control-color--disabled;
@@ -42,8 +42,8 @@ $filter-area-height: 60px;
   }
   .readonly & {
     background-color: $background-color--content;
-    transition: background-color 0s linear;
     cursor: default;
+    min-width: $dropdown-width--medium;
     width: auto;
     height: auto;
     min-height: $component-height;
@@ -63,7 +63,7 @@ $filter-area-height: 60px;
     border-left: $border--single solid $control-border-color--default;
     border-bottom: $border--single solid $control-border-color--default;
     border-radius: 1px;
-    transition: background-color 0.6s linear, border-color 0.6s linear;
+    transition: width 0.3s linear 0s, max-width 0.3s linear 0s, border-color 0.3s linear 0.3s, background-color 0.3s linear 0.3s, opacity 0.3s linear 0.3s;
     text-overflow: ellipsis;
     overflow: hidden;
     white-space: nowrap;
@@ -73,21 +73,21 @@ $filter-area-height: 60px;
       cursor: default;
     }
     .readonly & {
+      transition: width 0.3s linear 0.3s, max-width 0.3s linear 0.3s, border-color 0.3s linear 0s, background-color 0.3s linear 0s, opacity 0.3s linear 0.3s;
       background-color: $background-color--content;
       border-color: $background-color--content;
       outline: none;
       cursor: text;
-      transition: max-width 0.3s linear;
       word-wrap: break-word;
-      overflow: visible;
-      white-space: normal;
-      height: auto;
+      min-height: $component-height;
       display: block;
-      max-width: none;
+      max-height: 500px;
+      max-width: 500px;
     }
   } //Ikon, uppåt- eller nedåtpil
   &:after {
     @extend .bg-image-icon-chevron-inverted;
+    opacity: 1;
     display: block;
     content: "";
     vertical-align: middle;
@@ -105,7 +105,7 @@ $filter-area-height: 60px;
       cursor: pointer;
     }
     .readonly & {
-      display: none;
+      opacity: 0;
     }
   }
   &.dropdown--small {
