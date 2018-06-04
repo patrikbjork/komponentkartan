@@ -58,6 +58,7 @@ export { TableRowComponent } from './controls/table/table-row.component';
 export { TableHeaderComponent } from './controls/table/table-header.component';
 export { FilterTagComponent } from './controls/filter-tag/filter-tag.component';
 export { FilterTagGroupComponent } from './controls/filter-tag/filter-tag-group.component';
+export { ToggleButtonComponent } from './controls/toggle-button/toggle-button.component';
 
 export { ICalendarDay } from './models/calendarDay.model';
 export { ICalendarMonth } from './models/calendarMonth.model';

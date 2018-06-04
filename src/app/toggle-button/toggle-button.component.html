@@ -1,0 +1,37 @@
+<app-component-docs [componentName]="'Filter tag'">
+  <div class="docs__overview">
+   
+  </div>
+  <div class="docs__examples">
+   <vgr-toggle-button></vgr-toggle-button>
+  </div>
+  <div class="docs__api">
+    <table class="property-table">
+      <tr>
+        <th>Namn</th>
+        <th>Beskrivning</th>
+        <th>Exempel</th>
+      </tr>
+      <tr>
+        <td>disabled: boolean</td>
+        <td>Inaktivera filter tag. Förvalt värde är
+          <code>false</code>.</td>
+        <td>[disabled]="true"</td>
+      </tr>
+      <tr>
+        <td>ariaLabel: string</td>
+        <td>Värde för
+          <code>aria-label</code>. Förvalt värde är "Ta bort filtrering [text]", där [text] är text content för
+          <code>&lt;vgr-filter-tag&gt;</code>.</td>
+        <td>[ariaLabel]="En alternativ beskrivning."</td>
+      </tr>
+      <tr>
+        <td>remove: EventEmitter</td>
+        <td>Event som triggas efter att animationen för bortagning av filter är klar. Bör kopplas till uppdatering av tillstånd
+          för den bakomliggande filtreringen.</td>
+        <td>(remove)="removeFilter()"</td>
+      </tr>
+    </table>
+  </div>
+  <div class="docs__wcag"></div>
+</app-component-docs>

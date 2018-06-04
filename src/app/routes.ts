@@ -41,6 +41,7 @@ import { ExamplesListwithcardsComponent } from './examples-listwithcards/example
 import { ExamplesListwithlistsComponent } from './examples-listwithlists/examples-listwithlists.component';
 import { TableComponent } from './table/table.component';
 import { FilterTagComponent } from './filter-tag/filter-tag.component';
+import { ToggleButtonComponent } from './toggle-button/toggle-button.component';
 
 import { IconsComponent } from './icons/icons.component';
 import { ActionPanelsComponent } from './actionpanels/actionpanels.component';
@@ -89,6 +90,7 @@ export const appRoutes: Routes = [
     { path: 'examples-listwithlists', component: ExamplesListwithlistsComponent },
     { path: 'actionPanels', component: ActionPanelsComponent },
     { path: 'filter-tag', component: FilterTagComponent },
+    { path: 'toggle-button', component: ToggleButtonComponent },
     { path: 'ring-with-text', component: RingWithTextComponent },
     { path: '**', redirectTo: '/' }
 ];
