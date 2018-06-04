@@ -1,0 +1,68 @@
+$toggle-button-height--medium: 30px;
+$toggle-button-height--small: 30px;
+
+.toggle-button-group {
+  display: inline-flex;
+  flex-wrap: wrap;
+  margin-bottom: -10px; 
+  .toggle-button {
+    margin-right: 0px;
+    margin-bottom: 10px;
+  }
+}
+
+.toggle-button {
+  @extend .button__base;
+  @extend .background-color--secondary;
+  @extend .color--primary;
+  @extend .border-color--primary;
+  // background-color: $text-color--light;
+  border-width: 1px;
+  border-style: solid;
+  font-size: $font-size--small;
+  font-family: $font-family;
+  height: $toggle-button-height--small;
+  line-height: $toggle-button-height--small;
+  &.button--disabled {
+    color: $secondary-color--default;
+    background-color: $text-color--light;
+    border-color: $secondary-color--default;
+  }
+  &:hover:not(.button--disabled),
+  &:focus:not(.button--disabled) {
+    @extend .background-color--primary;
+    color: $text-color--light;
+    transition: background-color 0.5s ease, color 0.5s ease;
+  }
+  
+  &.toggle-button--pressed {
+    @extend .background-color--primary;
+    color: $text-color--light;
+  }
+  .toggle-button__content {
+    padding-left: 17px; 
+    padding-right: 17px;
+  }
+}
+  
+@media screen and (min-width: $desktop-width--medium) {
+  .toggle-button-group {
+    margin-bottom: -15px; 
+    .toggle-button {
+      margin-right: 0px;
+      margin-bottom: 1px;
+    }
+  }
+
+  .toggle-button {
+    font-size: $font-size--medium;
+    height: $toggle-button-height--medium;
+    line-height: $toggle-button-height--medium;
+    
+    .toggle-button__content {
+      height: $toggle-button-height--medium;
+      padding-left: 21px;
+      padding-right: 21px;
+    }
+  }
+}

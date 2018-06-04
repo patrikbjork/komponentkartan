@@ -1,9 +1,15 @@
 <app-component-docs [componentName]="'Filter tag'">
   <div class="docs__overview">
-   
+
   </div>
   <div class="docs__examples">
-   <vgr-toggle-button></vgr-toggle-button>
+    <vgr-toggle-button [pressed]="active" (click)="toggle()">test {{active}}</vgr-toggle-button>
+    <vgr-toggle-button [disabled]="true">disabled test</vgr-toggle-button>
+  </div>
+  <div>
+    <vgr-toggle-button-group>
+      <vgr-toggle-button>test in group</vgr-toggle-button>
+    </vgr-toggle-button-group>
   </div>
   <div class="docs__api">
     <table class="property-table">

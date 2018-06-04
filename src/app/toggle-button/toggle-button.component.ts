@@ -6,10 +6,14 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./toggle-button.component.css']
 })
 export class ToggleButtonComponent implements OnInit {
-
+  active = false;
   constructor() { }
 
   ngOnInit() {
+  }
+
+  toggle() {
+    this.active = !this.active;
   }
 
 }

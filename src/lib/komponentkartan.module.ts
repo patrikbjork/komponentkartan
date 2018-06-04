@@ -93,7 +93,8 @@ import * as $ from 'jquery';
     type.FilterTagComponent,
     type.RingWithTextComponent,
     type.FilterTagGroupComponent,
-    type.ToggleButtonComponent
+    type.ToggleButtonComponent,
+    type.ToggleButtonGroupComponent
   ],
   exports: [
     type.SafePipe,
@@ -161,7 +162,8 @@ import * as $ from 'jquery';
     type.FilterTagComponent,
     type.RingWithTextComponent,
     type.FilterTagGroupComponent,
-    type.ToggleButtonComponent
+    type.ToggleButtonComponent,
+    type.ToggleButtonGroupComponent
   ],
   providers: [
     type.ModalService,
