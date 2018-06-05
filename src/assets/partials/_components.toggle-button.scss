@@ -1,31 +1,38 @@
-$toggle-button-height--medium: 30px;
-$toggle-button-height--small: 30px;
+$toggle-button-height: 28px;
 
 .toggle-button-group {
   display: inline-flex;
   flex-wrap: wrap;
-  margin-bottom: -10px; 
+  margin-bottom: -10px;
   .toggle-button {
     margin-right: 0px;
     margin-bottom: 10px;
   }
 }
 
+
 .toggle-button {
-  @extend .button__base;
-  @extend .background-color--secondary;
-  @extend .color--primary;
-  @extend .border-color--primary;
-  // background-color: $text-color--light;
+  //@extend .button__base;
+  position: relative;
+  box-sizing: border-box;
+  padding: 0;
+  border: 0;
   border-width: 1px;
+  border-radius: 1px;
   border-style: solid;
-  font-size: $font-size--small;
+  vertical-align: top;
+  text-align: center;
+  cursor: pointer;
+  @extend .border-color--primary;
+  background-color: $text-color--light;
+  @extend .color--primary;
   font-family: $font-family;
-  height: $toggle-button-height--small;
-  line-height: $toggle-button-height--small;
+  font-size: $font-size--small;
+  height: $toggle-button-height;
+  line-height: $toggle-button-height;
   &.button--disabled {
-    color: $secondary-color--default;
     background-color: $text-color--light;
+    color: $secondary-color--default;
     border-color: $secondary-color--default;
   }
   &:hover:not(.button--disabled),
@@ -33,6 +40,9 @@ $toggle-button-height--small: 30px;
     @extend .background-color--primary;
     color: $text-color--light;
     transition: background-color 0.5s ease, color 0.5s ease;
+  }
+  &:active:not(.button--disabled) {
+    box-shadow: 3px 3px 9px 0px rgba(0, 0, 0, 0.5); 
   }
   
   &.toggle-button--pressed {
@@ -42,6 +52,9 @@ $toggle-button-height--small: 30px;
   .toggle-button__content {
     padding-left: 17px; 
     padding-right: 17px;
+  }
+  .button__fixIE {
+    position: relative;
   }
 }
   
@@ -56,11 +69,8 @@ $toggle-button-height--small: 30px;
 
   .toggle-button {
     font-size: $font-size--medium;
-    height: $toggle-button-height--medium;
-    line-height: $toggle-button-height--medium;
     
     .toggle-button__content {
-      height: $toggle-button-height--medium;
       padding-left: 21px;
       padding-right: 21px;
     }

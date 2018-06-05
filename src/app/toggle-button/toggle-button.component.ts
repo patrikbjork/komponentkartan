@@ -6,14 +6,25 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./toggle-button.component.css']
 })
 export class ToggleButtonComponent implements OnInit {
-  active = false;
+  state = false;
+  states = [{ 'text': 'Favoriter', 'state': false }, { 'text': 'Avtal', 'state': false }];
   constructor() { }
 
   ngOnInit() {
   }
 
   toggle() {
-    this.active = !this.active;
+    this.state = !this.state;
+  }
+
+  toggleStates(state: any) {
+    this.states.forEach(element => {
+      element.state = false;
+      if (element.text === state.text) {
+        element.state = true;
+      }
+    });
+
   }
 
 }
