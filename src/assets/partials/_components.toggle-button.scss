@@ -12,49 +12,40 @@ $toggle-button-height: 28px;
 
 
 .toggle-button {
-  //@extend .button__base;
-  position: relative;
-  box-sizing: border-box;
-  padding: 0;
-  border: 0;
-  border-width: 1px;
-  border-radius: 1px;
-  border-style: solid;
-  vertical-align: top;
-  text-align: center;
-  cursor: pointer;
-  @extend .border-color--primary;
-  background-color: $text-color--light;
-  @extend .color--primary;
+  @extend .button__base;
   font-family: $font-family;
   font-size: $font-size--small;
   height: $toggle-button-height;
   line-height: $toggle-button-height;
-  &.button--disabled {
-    background-color: $text-color--light;
-    color: $secondary-color--default;
-    border-color: $secondary-color--default;
-  }
-  &:hover:not(.button--disabled),
-  &:focus:not(.button--disabled) {
-    @extend .background-color--primary;
-    color: $text-color--light;
-    transition: background-color 0.5s ease, color 0.5s ease;
-  }
   &:active:not(.button--disabled) {
     box-shadow: 3px 3px 9px 0px rgba(0, 0, 0, 0.5); 
+    transform: scale(1);
+  } 
+  &.button--secondary {
+    @extend .color--primary;
+    @extend .border-color--primary;
+    background-color: $text-color--light;
+    line-height: 28px;
+    border-width: 1px;
+    border-style: solid;
+    // padding-left: 17px;
+    // padding-right: 17px;
+    &.button--disabled {
+      color: $secondary-color--default;
+      background-color: $text-color--light;
+      border-color: $secondary-color--default;
+    }
+    &:hover:not(.button--disabled),
+    &:focus:not(.button--disabled) {
+      @extend .background-color--primary;
+      color: $text-color--light;
+      transition: background-color 0.5s ease, color 0.5s ease;
+    } 
   }
   
-  &.toggle-button--pressed {
-    @extend .background-color--primary;
-    color: $text-color--light;
-  }
   .toggle-button__content {
     padding-left: 17px; 
     padding-right: 17px;
-  }
-  .button__fixIE {
-    position: relative;
   }
 }
   

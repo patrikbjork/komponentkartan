@@ -1,6 +1,6 @@
 <span (click)="checkDisabled($event)" (keydown)="onKeydown($event)">
   <button type="button" class="toggle-button noselect"    
-  [ngClass]="{'button--disabled': disabled, 'toggle-button--pressed': pressed}"    
+  [ngClass]="{'button--disabled': disabled, 'button--secondary': !pressed}"    
   [attr.aria-disabled]="disabled" [attr.aria-label]="ariaLabel" [tabindex]="tabindex">
     <span class="button__fixIE">
       <span #content class="toggle-button__content">
