@@ -10,7 +10,6 @@ $toggle-button-height: 28px;
   }
 }
 
-
 .toggle-button {
   @extend .button__base;
   font-family: $font-family;
@@ -28,8 +27,6 @@ $toggle-button-height: 28px;
     line-height: 28px;
     border-width: 1px;
     border-style: solid;
-    // padding-left: 17px;
-    // padding-right: 17px;
     &.button--disabled {
       color: $secondary-color--default;
       background-color: $text-color--light;
@@ -59,8 +56,7 @@ $toggle-button-height: 28px;
   }
 
   .toggle-button {
-    font-size: $font-size--medium;
-    
+    font-size: $font-size--medium;    
     .toggle-button__content {
       padding-left: 21px;
       padding-right: 21px;
