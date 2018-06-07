@@ -16,7 +16,8 @@
     <div style="margin-bottom: 20px">
       <vgr-input style="display: inline-block" #filterInput></vgr-input>
       <vgr-button (click)="addFilter(filterInput.value)">Lägg till filter</vgr-button>
-      <vgr-button (click)="removeAllFilters()">Ta bort alla filter</vgr-button>      
+      <vgr-button (click)="removeAllFilters()">Ta bort alla filter</vgr-button>
+      <vgr-filter-tag>text</vgr-filter-tag>      
     </div>
     <div style="margin-bottom: 20px" *ngIf="filters.length">
       <vgr-filter-tag-group>

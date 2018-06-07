@@ -7,7 +7,12 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ToggleButtonComponent implements OnInit {
   state = false;
-  states = [{ 'text': 'Favoriter', 'state': false }, { 'text': 'Avtal', 'state': false }];
+  states = [
+    { 'text': 'Favoriter', 'state': false },
+    { 'text': 'Avtal', 'state': false },
+    { 'text': 'Valda', 'state': false },
+    { 'text': 'Hej', 'state': false }
+  ];
   constructor() { }
 
   ngOnInit() {

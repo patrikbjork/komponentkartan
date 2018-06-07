@@ -1,10 +1,14 @@
 <app-component-docs [componentName]="'Filter tag'">
   <div class="docs__overview">
-
+      <div>
+          <vgr-toggle-button-group>
+            <vgr-toggle-button *ngFor="let state of states" [pressed]="state.state" (click)="toggleStates(state)">{{state.text}}</vgr-toggle-button>
+          </vgr-toggle-button-group>
+        </div>
   </div>
   <div class="docs__examples">
-    <vgr-toggle-button [pressed]="state" (click)="toggle()">test</vgr-toggle-button> State: {{state}}
-    <vgr-toggle-button [disabled]="true">disabled test</vgr-toggle-button>
+    <vgr-toggle-button [pressed]="state" (click)="toggle()">single toggle button</vgr-toggle-button> State: {{state}}
+    <vgr-toggle-button [disabled]="true">disabled toggle button</vgr-toggle-button>
     <br>
     <br>
     <div>
@@ -22,22 +26,16 @@
       </tr>
       <tr>
         <td>disabled: boolean</td>
-        <td>Inaktivera filter tag. Förvalt värde är
+        <td>Inaktivera toggle button. Förvalt värde är
           <code>false</code>.</td>
         <td>[disabled]="true"</td>
       </tr>
       <tr>
         <td>ariaLabel: string</td>
         <td>Värde för
-          <code>aria-label</code>. Förvalt värde är "Ta bort filtrering [text]", där [text] är text content för
-          <code>&lt;vgr-filter-tag&gt;</code>.</td>
+          <code>aria-label</code>. Förvalt värde är "Aktivera [text]", där [text] är text content för
+          <code>&lt;vgr-toggle-button&gt;</code>.</td>
         <td>[ariaLabel]="En alternativ beskrivning."</td>
-      </tr>
-      <tr>
-        <td>remove: EventEmitter</td>
-        <td>Event som triggas efter att animationen för bortagning av filter är klar. Bör kopplas till uppdatering av tillstånd
-          för den bakomliggande filtreringen.</td>
-        <td>(remove)="removeFilter()"</td>
       </tr>
     </table>
   </div>
