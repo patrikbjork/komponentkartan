@@ -1,6 +1,6 @@
 <app-component-docs [componentName]="'Filter tag'">
   <div class="docs__overview">
-      <div>
+      <div style="width: 400px;">
           <vgr-toggle-button-group>
             <vgr-toggle-button *ngFor="let state of states" [pressed]="state.state" (click)="toggleStates(state)">{{state.text}}</vgr-toggle-button>
           </vgr-toggle-button-group>
@@ -11,7 +11,7 @@
     <vgr-toggle-button [disabled]="true">disabled toggle button</vgr-toggle-button>
     <br>
     <br>
-    <div>
+    <div style="width: 400px;">
       <vgr-toggle-button-group>
         <vgr-toggle-button *ngFor="let state of states" [pressed]="state.state" (click)="toggleStates(state)">{{state.text}}</vgr-toggle-button>
       </vgr-toggle-button-group>
