@@ -10,8 +10,7 @@ export class ToggleButtonComponent implements OnInit {
   states = [
     { 'text': 'Favoriter', 'state': true },
     { 'text': 'Avtal', 'state': false },
-    { 'text': 'Valda', 'state': false },
-    { 'text': 'Hej', 'state': false }
+    { 'text': 'Valda', 'state': false }
   ];
   constructor() { }
 

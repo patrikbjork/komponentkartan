@@ -1,4 +1,4 @@
-$toggle-button-height: 30px;
+$toggle-button-height: 28px;
 
 .toggle-button-group {
   width: 100%;
@@ -21,15 +21,15 @@ $toggle-button-height: 30px;
   }
   :first-child .toggle-button-container {
     .toggle-button {
-      border-top-left-radius: 3px;
-      border-bottom-left-radius: 3px;  
+      border-top-left-radius: 1px;
+      border-bottom-left-radius: 1px;  
     }
   }
   :last-child .toggle-button-container {
     .toggle-button {
       border-right-width: 1px;
-      border-top-right-radius: 3px;
-      border-bottom-right-radius: 3px;
+      border-top-right-radius: 1px;
+      border-bottom-right-radius: 1px;
     }
   }
 }
@@ -40,17 +40,19 @@ $toggle-button-height: 30px;
   font-size: $font-size--small;
   height: $toggle-button-height;
   line-height: $toggle-button-height;
+  border-width: 1px;
+  border-style: solid;
+  @extend  .border-color--primary;
   &:active:not(.button--disabled) {
     box-shadow: 3px 3px 9px 0px rgba(0, 0, 0, 0.5); 
     transform: scale(1);
   } 
+  &:focus:not(:active) {
+    outline-offset: -2px;
+  }
   &.button--secondary {
     @extend .color--primary;
-    @extend .border-color--primary;
     background-color: $text-color--light;
-    line-height: 28px;
-    border-width: 1px;
-    border-style: solid;
     &.button--disabled {
       color: $secondary-color--default;
       background-color: $text-color--light;
@@ -74,7 +76,6 @@ $toggle-button-height: 30px;
   .toggle-button-group {
     margin-bottom: -15px; 
     .toggle-button {
-      //margin-right: 0px;
       margin-bottom: 15px;
     }
   }

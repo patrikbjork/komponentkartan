@@ -1,4 +1,4 @@
-import { Component, AfterContentInit, OnDestroy, ContentChildren, QueryList } from '@angular/core';
+import { Component, AfterContentInit, OnDestroy, ContentChildren, QueryList, Input } from '@angular/core';
 import { ToggleButtonComponent } from './toggle-button.component';
 import { Subject } from 'rxjs/Subject';
 import { takeUntil } from 'rxjs/operators';
@@ -9,6 +9,7 @@ import { takeUntil } from 'rxjs/operators';
 })
 export class ToggleButtonGroupComponent implements AfterContentInit, OnDestroy {
 
+  @Input() width: string;
   @ContentChildren(ToggleButtonComponent) toggleButtons: QueryList<ToggleButtonComponent>;
   toggleButtonSubscriptions = [];
   lastSelectedIndex: number;
