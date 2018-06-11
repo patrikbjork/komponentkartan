@@ -14,11 +14,17 @@ export class ToggleButtonComponent implements AfterViewInit {
   @ViewChild('content') content: ElementRef;
 
   tabindex = 0;
+  ariaPressed: boolean;
 
   ngAfterViewInit() {
     if (!this.ariaLabel) {
       Promise.resolve(null).then(() =>
-        this.ariaLabel = `Aktivera ${this.content.nativeElement.innerText}`
+        this.ariaLabel = `${this.content.nativeElement.innerText}`
+      );
+    }
+    if (!this.ariaPressed) {
+      Promise.resolve(null).then(() =>
+        this.ariaPressed = this.pressed
       );
     }
   }
