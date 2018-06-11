@@ -69,4 +69,20 @@ describe('[ToggleButtonComponent - Angular]', () => {
       expect(clickBubbled).toBe(true);
     });
   });
+
+  describe('When pressed is true', () => {
+    it('button is dispalyed as primary', () => {
+      component.pressed = true;
+      fixture.detectChanges();
+      expect(buttonElement.classes['button--secondary']).toBe(false);
+    });
+  });
+
+  describe('When pressed is false', () => {
+    it('button is dispalyed as secondary', () => {
+      component.pressed = false;
+      fixture.detectChanges();
+      expect(buttonElement.classes['button--secondary']).toBe(true);
+    });
+  });
 });
